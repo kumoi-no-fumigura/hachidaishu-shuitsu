@@ -2,21 +2,13 @@
 
 雲居の文庫（くもゐのふみぐら）の一作品です。著作権の保護期間が満了した写本から起こした本文を、誰でも読み・使い・直せるように置いています。
 
-**サイトで読む：[八代集秀逸（雲居の文庫（くもゐのふみぐら））](https://informanellica.com/kumoi-no-fumigura/read.html?work=nijl-hachidaishu-shuitsu)**（原本の画像の表示、修正案の送信ができます）
+**サイトで読む：[八代集秀逸（雲居の文庫（くもゐのふみぐら））](https://informanellica.com/kumoi-no-fumigura/read.html?work=nijl-hachidaishu-shuitsu)**（訳との対訳、原本の画像の表示、修正案の送信ができます）
 
 | | |
 |---|---|
 | 分類 | 私撰集 |
-| 種類 | 私撰集（秀歌撰） |
-| 成立 | 鎌倉前期 |
-| 作者 | 藤原定家 撰とされる |
 | 分量 | 8段落・2,341字 |
-| 作中歌 | 79首 |
-| 状態 | 未校正 |
-
-## 作品について
-
-古今集から新古今集までの八代の勅撰集から、各十首ずつの秀歌を選んだ秀歌撰。勅により定家が撰んだと伝える。ここの本文は国文学研究資料館所蔵の写本一冊で、小町・貫之らの歌から新古今の西行・後鳥羽院の歌までを収める。
+| 状態 | 下校正済み |
 
 ## 底本
 
@@ -33,12 +25,14 @@
 | パス | 中身 |
 |---|---|
 | `honbun/` | 本文。1 行が 1 段落で、`段落ID<TAB>本文` の形です。原本の行の切れ目は ⏎ で示しています（⏎ は改行の印で、本文の字ではありません）。50段落ごとにファイルを分けています（1ファイル）。 |
-| `uta.tsv` | 作中歌の一覧（番号・段落ID・本文・読み・詠み手・種別・原本のコマ）。 |
+| `yaku/` | 現代語訳。1 行が 1 段落（歌集は 1 首）で、`段落ID<TAB>訳<TAB>出典` の形です。出典の欄が空の訳は、このプロジェクトで作ったものです（AI を使っています）。本文と同じファイル分けです。 |
 | `nijl-hachidaishu-shuitsu.json` | 本文・底本・作品の説明・作中歌のデータをまとめた JSON（訳は入れず、`yaku/` だけに置いています）。 |
 
 段落ID（例: `nijl-hachidaishu-shuitsu-0001`）は、本文を直しても変わりません。
 
 ## 誤りを見つけたら
+
+訳の誤りや、もっとよい訳は、[「訳の誤り」の Issue](https://github.com/kumoi-no-fumigura/hachidaishu-shuitsu/issues/new?template=yaku.yml) か、`yaku/` の該当行を直した Pull Request で知らせてください。
 
 
 - **Issue で知らせる**：[「本文の誤り」の Issue を作る](https://github.com/kumoi-no-fumigura/hachidaishu-shuitsu/issues/new?template=teisei.yml)。段落ID・いまの本文・直した本文・根拠を書いてください。
